@@ -1,0 +1,67 @@
+package com.Class;
+
+public class Class1 {
+
+	public static void main(String[] args) {
+		int[] arr = new int[3];
+		int[] arr2 = new int[10];
+		String[] arr3 = new String[5];
+
+		arr[0] = 3; // 값넣기
+
+		System.out.println(arr2[0]); // 0
+		System.out.println(arr3[0]); // null
+
+		String[] arr4 = { "a", "b", "c", "d", "e" };
+
+		for (int i = 0; i < 10; i++) {
+			arr2[i] = i + 1;
+		}
+
+		for (int k : arr2) {
+			System.out.println(k);
+		}
+
+		int[] gugu = new int[9];
+		for (int i = 2; i < 10; i++) {
+			for (int j = 0; j < gugu.length; j++) {
+				gugu[j] = i * (j + 1);
+				System.out.printf("%d X %d = %d\n", i, (j + 1), gugu[j]);
+			}
+			System.out.println("---------------------");
+		}
+		
+		int[] arr5 = {15,7,8,27,5};
+		int[] arr6 = {15,7,8,27,5};
+		
+		for(int i=0; i<arr5.length-1; i++) {
+			for(int j=i+1; j<arr5.length; j++) {
+				if(arr5[i]>arr5[j]) {
+					int temp = arr5[i];
+					arr5[i]=arr5[j];
+					arr5[j]=temp;
+				}
+			}
+		}
+		for(int a : arr5) {
+			System.out.println(a);
+		}
+		/*
+		for(int i=0; i<arr6.length; i++) {
+			for(int j=0; j<arr.length-1; j++) {
+				if(arr6[j]>arr6[j+1]) {
+					int temp = arr6[i];
+					arr6[i]=arr6[j];
+					arr6[j]=temp;
+				}
+				}
+			}
+		for(int b : arr6) {
+			System.out.println(b);
+		}
+		*/
+		
+
+	}
+
+}
