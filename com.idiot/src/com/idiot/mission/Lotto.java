@@ -1,12 +1,13 @@
 package com.idiot.mission;
 
 public class Lotto {
+
 	static int[] count = new int[45];
 
 	public static void main(String[] args) {
 
 		lotto();
-		for(int i:lotto()) {
+		for (int i : lotto()) {
 			System.out.println(i);
 		}
 		lotto();
@@ -16,7 +17,8 @@ public class Lotto {
 		lotto();
 		lotto();
 		lotto();
-		countPrint(count);
+		lotto();
+		countPrint(count); 
 
 	}
 
