@@ -150,6 +150,38 @@ public class Question1 {
 
 		}
 		*/
+		
+		ArrayList arr = new ArrayList();
+		System.out.println("정수를 입력하세요");
+		int num = scan.nextInt();
+		String changenum = Integer.toString(num);
+		
+		int sum=0;
+		
+		for(int i=0; i<changenum.length(); i++) {
+			arr.add(i, changenum.substring(i,i+1));
+		}
+		//System.out.println(arr);
+		
+		for(int i =0; i<arr.size(); i++) {
+			
+			String temp = (String) arr.get(i);
+			arr.remove(i);
+			String str = "";
+			
+			for(int j=0; j<arr.size(); j++) {
+				str+=arr.get(j);
+			}
+			if(i==arr.size()) {
+				System.out.print(str);
+			}else {
+				System.out.print(str + " + ");
+			}
+			sum += Integer.parseInt(str);
+			arr.add(i,temp);
+		}
+		System.out.println(" = "+sum);
+		
 		}
 		
 		
